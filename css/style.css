@@ -1,0 +1,377 @@
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: PopLight;
+  src : url('.Poppins-Light.ttf');
+}
+@font-face {
+  font-family: PopRegular;
+  src : url('.Poppins-Regular.ttf');
+}
+body{
+  font-family: PopLight;
+}
+.portfolio{
+
+  color: white;
+  background: radial-gradient(rgba(43,55,96,1),rgba(11,16,35,1));
+}
+nav{
+  min-width: 10vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+}
+.logo{
+  font-size: 20px;
+  padding-top: 0px;
+  margin: 0px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.page{
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 1fr 5%;
+}
+
+.chef, .hairStyle{
+   position: absolute;
+   bottom: 0%;
+   left:0%;
+   width: 100%;
+   opacity: 0%;
+   pointer-events: none;
+}
+.hero{
+  margin-top: 100px;
+  overflow: hidden;
+  height: 500px;
+  allign-self: center;
+  justify-self: center;
+  display: flex;
+}
+
+.hero img{
+  height: 500px;
+  width: 180px;
+  transition: transform 0.3s ease-out;
+}
+.hero a{
+  display: flex;
+}
+
+.model-right{
+
+  transform: translate(0%,10%);
+}
+
+.model-left{
+
+  transform: translate(0%, -10%);
+}
+
+.hero:hover .model-right{
+  transform: translate(0%,0%);
+}
+
+.hero:hover .model-left{
+  transform: translate(0%,0%);
+}
+
+
+.details{
+  grid-column: 2/3;
+  alighn-self: end;
+}
+.details h1{
+  font-size: 64px;
+  padding-top: 500px;
+  font-family: 'Poppins', sans-serif;
+}
+.details h2{
+  font-size: 42px;
+  padding: 20px 0px;
+  font-family: 'Poppins', sans-serif;
+}
+.details p{
+  font-size: 24px;
+  padding : 20px 0px 50px 0px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.pages{
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.pages > div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pages h3{
+  font-size: 24px;
+  padding: 30px;
+
+}
+
+.pages svg{
+  cursor: pointer;
+  opacity: 0.5;
+  transform: scale(2);
+}
+
+.pages svg:hover {
+  animation: dot 0.5s ease-in-out infinite alternate;
+}
+
+.pages svg.active{
+  opacity: 1;
+}
+.social-links img{
+   padding-left: 5px;
+   padding-right: 5px;
+   height: 40px;
+   justify-content: center;
+   align-items: center;
+}
+@keyframes dot {
+  0%{
+    transform: scale(2);
+
+  }
+  100%{
+    transform: scale(4);
+  }
+}
+
+
+/*css for story*/
+.banner{
+  width: 100%;
+  height: 50vh;
+  position: relative;
+}
+.banner img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.author{
+
+  position: absolute;
+  font-family: 'Poppins', sans-serif;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%,-60%);
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+  text-align: center;
+
+
+}
+.author h1{
+  font-size: 42px;
+  font-family: 'Poppins', sans-serif;
+
+}
+.author h3{
+  font-size: 25px;
+  padding: 5px 0px;
+  font-family: 'Poppins', sans-serif;
+}
+.story, .my-work{
+  flex-direction: row;
+}
+.story-discription{
+  width: 50%;
+  padding-left: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+.work-discription{
+
+    width: 35%;
+    padding-left: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+.story-discription h3, .work-discription h3 {
+  font-size: 36px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  font-family: 'Poppins', sans-serif;
+
+}
+.story-discription p, .work-discription p{
+  padding: 20px 0px;
+  font-size: 20px;
+  padding-bottom: 100px;
+font-family: 'Poppins', sans-serif;
+}
+
+.profile{
+  padding-top: 20px;
+  width:  40%;
+  height: 50%;
+ position: absolute;
+  right: 5%;
+    transform: translateY(-125%);
+
+
+}
+.profile img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+
+}
+.work-gallery{
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3,200px);
+  position: absolute;
+  right: 5%;
+    transform: translateY(-90%);
+    padding-bottom: 40px;
+
+}
+.work-gallery img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+
+}
+@media (max-width: 1024px)
+{
+  .page{
+    grid-template-columns: 5% 1fr 5%;
+    grid-template-rows: 2fr 1fr;
+    align-items: center;
+  }
+  .hero{
+    grid-column: 2/3;
+    height: auto;
+    position: absolute;
+    left: 25%;
+    transform: translateY(-20%);
+  }
+  .hero img{
+    height: 500px;
+  }
+  .details{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    text-align: center;
+    position: absolute;
+    left: 30%;
+    /*transform: translateX(50%);*/
+
+  }
+  .details h1{
+    font-size: 48px;
+
+  }
+  .details h2{
+    font-size: 25px;
+
+  }
+  .details p{
+    font-size: 25px;
+
+  }
+  .story-discription, .work-discription{
+    width: 100%;
+  }
+ .my-work{
+   padding-top: 100px;
+  position: relative;
+   transform: translateY(60%);
+  }
+  .work-gallery, .profile{
+    transform: translateY(0%);
+  }
+  .profile{
+    transform:translateX(-60%);
+  }
+  .work-gallery{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(200px,1fr));
+    left : 15%;
+  }
+}
+@media (max-width: 768px) {
+   /*.page{
+     grid-template-rows: 1fr 1fr;
+   }*/
+   .hero img{
+     height: 350px;
+     width: 100px;
+   }
+   .details h1{
+     font-size: 35px;
+   }
+   .details h2{
+     font-size: 20px;
+   }
+}
+.nav-open{
+  position: absolute;
+  font-family: 'Poppins', sans-serif;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 50vh;
+  background: white;
+  opacity: 0.9;
+  z-index: 1;
+  color: black;
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 5%;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+}
+.change{
+  transform: translateY(0%);
+}
+.changelogo{
+  color: black
+}
+.contact{
+  grid-column: 2/4;
+  position: absolute;
+  left: 20%;
+}
+.social{
+  position: absolute;
+  right: 20%;
+}
+.nav-open h3{
+  font-size: 28px;
+  padding-bottom: 40px;
+}
+.nav-open p{
+  font-size: 18px;
+  opacity: 0.5;
+}
+.logo, .menu{
+  z-index: 2;
+
+}
+.menu{
+  cursor: pointer;
+
+}
+.menu:hover{
+  transform: scale(1.2);
+}
